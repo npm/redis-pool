@@ -2,7 +2,7 @@
 
 const P = require('bluebird');
 
-const redis = require('./lib/redis');
+const redis = require('@npmcorp/redis');
 
 module.exports = P.promisifyAll(require('generic-pool').Pool({
   name: 'redis',
