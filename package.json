@@ -1,0 +1,28 @@
+{
+  "name": "@npmcorp/redis-pool",
+  "version": "1.0.0",
+  "description": "a pooled redis implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/redis-pool.git"
+  },
+  "keywords": [
+    "redis",
+    "redis-pool"
+  ],
+  "author": "Raquel Vélez <raquel@rckbt.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/redis-pool/issues"
+  },
+  "homepage": "https://github.com/npm/redis-pool#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "generic-pool": "^2.4.2",
+    "redis": "^2.6.2"
+  }
+}
