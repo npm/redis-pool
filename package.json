@@ -4,7 +4,7 @@
   "description": "a pooled redis implementation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,11 @@
   "dependencies": {
     "@npmcorp/redis": "^1.0.0",
     "bluebird": "^3.4.1",
-    "generic-pool": "^2.4.2",
-    "redis": "^2.6.2"
+    "generic-pool": "^2.4.2"
+  },
+  "devDependencies": {
+    "redis-mock": "^0.10.0",
+    "require-inject": "^1.4.0",
+    "tap": "^6.3.0"
   }
 }
