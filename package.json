@@ -28,6 +28,6 @@
   "devDependencies": {
     "redis-mock": "^0.14.0",
     "require-inject": "^1.4.0",
-    "tap": "^6.3.0"
+    "tap": "^6.3.2"
   }
 }
