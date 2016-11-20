@@ -23,7 +23,7 @@
   "dependencies": {
     "@npmcorp/redis": "^1.0.0",
     "bluebird": "^3.4.1",
-    "generic-pool": "^2.4.2"
+    "generic-pool": "^2.4.3"
   },
   "devDependencies": {
     "redis-mock": "^0.16.0",
