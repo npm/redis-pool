@@ -10,21 +10,21 @@ const redisPool = requireInject.installGlobally('../', {
 });
 
 tap.test('redisPool releases a pool after a withConnection block', t => {
-  t.equal(redisPool.getPoolSize(), 1);
-  t.equal(redisPool.inUseObjectsCount(), 0); 
+  t.equal(redisPool.size, 1);
+  t.equal(redisPool.borrowed, 0); 
   return redisPool.withConnection(conn => {
     t.ok(conn);
-    t.equal(redisPool.getPoolSize(), 2);
+    t.ok(redisPool.size >= 1);
     return P.resolve()
       .then(() => {
-        t.equal(redisPool.getPoolSize(), 2);
-        t.equal(redisPool.inUseObjectsCount(), 1); 
+        t.ok(redisPool.size >= 1);
+        t.equal(redisPool.borrowed, 1); 
       });
   })
   .then(() => {
-    t.equal(redisPool.getPoolSize(), 2); 
-    t.equal(redisPool.inUseObjectsCount(), 0); 
-    redisPool.drainAsync().then(() => redisPool.destroyAllNow());
+    t.ok(redisPool.size >= 1); 
+    t.equal(redisPool.borrowed, 0); 
+    redisPool.drain().then(() => redisPool.clear());
   });
   
 });
