@@ -1,6 +1,6 @@
 {
   "name": "@npmcorp/redis-pool",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a pooled redis implementation",
   "main": "index.js",
   "scripts": {
