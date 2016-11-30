@@ -16,8 +16,8 @@ module.exports = require('generic-pool').createPool({
       client.once('error', reject);
     })
   },
-  destroy: function(client){
-    client.end()
+  destroy: function(client) {
+    client.end(true);
   }
 }, {
   max: 10,
