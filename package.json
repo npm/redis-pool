@@ -22,7 +22,7 @@
   "homepage": "https://github.com/npm/redis-pool#readme",
   "dependencies": {
     "@npmcorp/redis": "^1.0.0",
-    "bluebird": "^3.4.1",
+    "bluebird": "^3.4.6",
     "generic-pool": "^3.1.4"
   },
   "devDependencies": {
